@@ -13,7 +13,25 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'heading': ['Exo 2', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
+      },
       colors: {
+        'primary-red': {
+          DEFAULT: 'hsl(var(--primary-red))',
+          light: 'hsl(var(--primary-red-light))',
+          dark: 'hsl(var(--primary-red-dark))',
+        },
+        'dark': {
+          900: 'hsl(var(--dark-900))',
+          800: 'hsl(var(--dark-800))',
+          700: 'hsl(var(--dark-700))',
+        },
+        'light': {
+          50: 'hsl(var(--light-50))',
+          100: 'hsl(var(--light-100))',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
