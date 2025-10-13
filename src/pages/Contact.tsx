@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-contact.jpg";
 
@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -15,132 +15,120 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-extrabold font-heading uppercase tracking-tighter text-white mb-6">
+        <div className="relative z-10 max-w-screen-xl mx-auto container-padding text-center">
+          <div>
+            <h1 className="heading-display text-white mb-4 md:mb-6 text-balance">
               Get In Touch
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-fluid text-gray-200 max-w-3xl mx-auto text-balance">
               Schedule your appointment or reach out with any questions
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="section-padding bg-gray-50">
+        <div className="max-w-screen-xl mx-auto container-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8"
-            >
-              <h2 className="text-3xl font-bold font-heading text-gray-900 mb-6">
-                Send Us a Message
-              </h2>
-              <ContactForm />
-            </motion.div>
+            <ScrollReveal direction="left">
+              <div className="card-modern shadow-card-hover p-6 md:p-8">
+                <h2 className="heading-hero text-gray-900 mb-6 md:mb-8 text-balance">
+                  Send Us a Message
+                </h2>
+                <ContactForm />
+              </div>
+            </ScrollReveal>
 
             {/* Location Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h2 className="text-3xl font-bold font-heading text-gray-900 mb-6">
-                  Contact Information
-                </h2>
+            <ScrollReveal direction="right">
+              <div className="space-y-6 md:space-y-8">
+                <div className="card-modern shadow-card-hover p-6 md:p-8">
+                  <h2 className="heading-hero text-gray-900 mb-6 md:mb-8 text-balance">
+                    Contact Information
+                  </h2>
 
-                <div className="space-y-6">
-                  <a
-                    href="tel:555-123-4567"
-                    className="flex items-start gap-4 group hover:text-primary-red transition-colors"
-                  >
-                    <div className="w-12 h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red/20 transition-colors">
-                      <Phone className="h-6 w-6 text-primary-red" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-1">Phone</p>
-                      <p className="text-gray-600">(555) 123-4567</p>
-                    </div>
-                  </a>
+                  <div className="space-y-4 md:space-y-6">
+                    <a
+                      href="tel:403-123-4567"
+                      className="flex items-start gap-3 md:gap-4 group hover:text-primary-red transition-colors"
+                    >
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red/20 transition-colors">
+                        <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary-red" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 mb-1 text-sm md:text-base">Phone</p>
+                        <p className="text-gray-600 text-sm md:text-base">(403) 123-4567</p>
+                      </div>
+                    </a>
 
-                  <a
-                    href="mailto:info@jonasauto.com"
-                    className="flex items-start gap-4 group hover:text-primary-red transition-colors"
-                  >
-                    <div className="w-12 h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red/20 transition-colors">
-                      <Mail className="h-6 w-6 text-primary-red" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-1">Email</p>
-                      <p className="text-gray-600">info@jonasauto.com</p>
-                    </div>
-                  </a>
+                    <a
+                      href="mailto:info@jonasauto.com"
+                      className="flex items-start gap-3 md:gap-4 group hover:text-primary-red transition-colors"
+                    >
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red/20 transition-colors">
+                        <Mail className="h-5 w-5 md:h-6 md:w-6 text-primary-red" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 mb-1 text-sm md:text-base">Email</p>
+                        <p className="text-gray-600 text-sm md:text-base">info@jonasauto.com</p>
+                      </div>
+                    </a>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-primary-red" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-1">Address</p>
-                      <address className="text-gray-600 not-italic">
-                        123 Auto Service Drive<br />
-                        Mechanicsville, ST 12345<br />
-                        United States
-                      </address>
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary-red" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 mb-1 text-sm md:text-base">Address</p>
+                        <address className="text-gray-600 not-italic text-sm md:text-base">
+                          5235 28 Ave SE<br />
+                          Calgary, AB T2B 3W3<br />
+                          Canada
+                        </address>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-primary-red" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-3">Business Hours</p>
-                      <div className="space-y-2 text-gray-600">
-                        <div className="flex justify-between gap-4">
-                          <span>Monday - Friday:</span>
-                          <span className="font-medium text-gray-900">8:00 AM - 6:00 PM</span>
-                        </div>
-                        <div className="flex justify-between gap-4">
-                          <span>Saturday:</span>
-                          <span className="font-medium text-gray-900">9:00 AM - 4:00 PM</span>
-                        </div>
-                        <div className="flex justify-between gap-4">
-                          <span>Sunday:</span>
-                          <span className="font-medium text-gray-900">Closed</span>
+                  <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-200">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-5 w-5 md:h-6 md:w-6 text-primary-red" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 mb-3 text-sm md:text-base">Business Hours</p>
+                        <div className="space-y-2 text-gray-600 text-sm md:text-base">
+                          <div className="flex justify-between gap-4">
+                            <span>Monday - Friday:</span>
+                            <span className="font-medium text-gray-900">8:00 AM - 6:00 PM</span>
+                          </div>
+                          <div className="flex justify-between gap-4">
+                            <span>Saturday:</span>
+                            <span className="font-medium text-gray-900">9:00 AM - 4:00 PM</span>
+                          </div>
+                          <div className="flex justify-between gap-4">
+                            <span>Sunday:</span>
+                            <span className="font-medium text-gray-900">Closed</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-64">
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <MapPin className="h-12 w-12 mx-auto mb-2 text-primary-red" />
-                    <p className="font-medium">Map Location</p>
-                    <p className="text-sm">123 Auto Service Drive, Mechanicsville, ST</p>
+                {/* Map Placeholder */}
+                <div className="card-modern shadow-card-hover overflow-hidden h-48 md:h-64">
+                  <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+                    <div className="text-center text-gray-600">
+                      <MapPin className="h-8 w-8 md:h-12 md:w-12 mx-auto mb-2 text-primary-red" />
+                      <p className="font-medium text-sm md:text-base">Map Location</p>
+                      <p className="text-xs md:text-sm">5235 28 Ave SE, Calgary, AB T2B 3W3</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

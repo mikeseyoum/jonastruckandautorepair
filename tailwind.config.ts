@@ -14,23 +14,32 @@ export default {
     },
     extend: {
       fontFamily: {
-        'heading': ['Exo 2', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'heading': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'body': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'display': ['Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       colors: {
         'primary-red': {
           DEFAULT: 'hsl(var(--primary-red))',
           light: 'hsl(var(--primary-red-light))',
           dark: 'hsl(var(--primary-red-dark))',
+          50: 'hsl(var(--primary-red-50))',
+          100: 'hsl(var(--primary-red-100))',
+          200: 'hsl(var(--primary-red-200))',
+          300: 'hsl(var(--primary-red-300))',
+          400: 'hsl(var(--primary-red-400))',
         },
         'dark': {
           900: 'hsl(var(--dark-900))',
           800: 'hsl(var(--dark-800))',
           700: 'hsl(var(--dark-700))',
+          600: 'hsl(var(--dark-600))',
         },
         'light': {
           50: 'hsl(var(--light-50))',
           100: 'hsl(var(--light-100))',
+          200: 'hsl(var(--light-200))',
+          300: 'hsl(var(--light-300))',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -81,6 +90,15 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'glass': 'var(--shadow-glass)',
+        'modern': 'var(--shadow-modern)',
+        'card': 'var(--shadow-card)',
+        'card-hover': 'var(--shadow-card-hover)',
+        'red': 'var(--shadow-red)',
+        'red-lg': 'var(--shadow-red-lg)',
+        'subtle': 'var(--shadow-subtle)',
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -98,10 +116,32 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "glow": {
+          "from": { boxShadow: "0 0 20px hsl(var(--primary-red) / 0.3)" },
+          "to": { boxShadow: "0 0 30px hsl(var(--primary-red) / 0.6)" },
+        },
+        "shimmer": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "shimmer": "shimmer 2s infinite",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
+        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+        "slide-in-left": "slideInLeft 0.6s ease-out forwards",
+        "slide-in-right": "slideInRight 0.6s ease-out forwards",
+        "scale-in": "scaleIn 0.5s ease-out forwards",
+        "marquee": "marquee 20s linear infinite",
+        "typing": "typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite",
       },
     },
   },

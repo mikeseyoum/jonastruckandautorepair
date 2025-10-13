@@ -1,5 +1,3 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
 import { LucideIcon } from "lucide-react";
 
 interface StatCardProps {
@@ -11,35 +9,17 @@ interface StatCardProps {
 }
 
 const StatCard = ({ icon: Icon, value, label, suffix = "", index = 0 }: StatCardProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 2000 });
-  const displayValue = Math.round(springValue.get());
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, motionValue, value]);
-
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="text-center"
-    >
-      <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-red/10 rounded-2xl mb-4">
-        <Icon className="h-8 w-8 text-primary-red" />
+    <div className="text-center group">
+      <div className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary-red-50 to-primary-red-100 rounded-2xl mb-4 md:mb-6 shadow-subtle group-hover:shadow-red transition-all duration-500 group-hover:scale-105">
+        <Icon className="h-6 w-6 md:h-7 md:w-7 text-primary-red group-hover:text-white transition-all duration-500" />
       </div>
-      <motion.div className="text-5xl font-extrabold text-gray-900 mb-2 font-heading">
-        {displayValue}{suffix}
-      </motion.div>
-      <p className="text-gray-600 font-medium">{label}</p>
-    </motion.div>
+      <div className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 md:mb-3 font-heading group-hover:text-primary-red transition-colors duration-300">
+        {value}{suffix}
+      </div>
+      <p className="text-sm md:text-base text-gray-600 font-medium group-hover:text-gray-700 transition-colors duration-300 text-balance">{label}</p>
+      <div className="mt-4 md:mt-6 w-10 md:w-12 h-0.5 bg-gradient-to-r from-primary-red-light to-primary-red rounded-full mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
   );
 };
 

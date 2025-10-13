@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Wrench, Shield, Gauge, Droplet, Battery, CircleDot, Thermometer, Zap, Settings, Truck } from "lucide-react";
 import heroImage from "@/assets/hero-services.jpg";
 
@@ -60,7 +60,7 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -68,43 +68,37 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-extrabold font-heading uppercase tracking-tighter text-white mb-6">
+        <div className="relative z-10 max-w-screen-xl mx-auto container-padding text-center">
+          <div>
+            <h1 className="heading-display text-white mb-4 md:mb-6 text-balance">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-fluid text-gray-200 max-w-3xl mx-auto text-balance">
               Comprehensive automotive maintenance and repair services for all makes and models
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold font-heading uppercase tracking-tighter text-gray-900 mb-4">
-              Complete Auto Care Solutions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From routine maintenance to complex repairs, we've got you covered
-            </p>
-          </motion.div>
+      <section className="section-padding bg-white">
+        <div className="max-w-screen-xl mx-auto container-padding">
+          <ScrollReveal>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="heading-hero text-gray-900 mb-4 md:mb-6 text-balance">
+                Complete Auto Care Solutions
+              </h2>
+              <p className="text-fluid text-gray-600 max-w-2xl mx-auto text-balance">
+                From routine maintenance to complex repairs, we've got you covered
+              </p>
+            </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {allServices.map((service, i) => (
-              <ServiceCard key={i} {...service} index={i} />
+              <ScrollReveal key={i} delay={((i % 3) + 1) * 100 as 100 | 200 | 300 | 400}>
+                <ServiceCard {...service} index={i} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
