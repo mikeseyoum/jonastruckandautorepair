@@ -70,9 +70,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
       {/* Basic Information */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <div className="space-y-2">
           <Label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name *</Label>
           <Input 
@@ -81,7 +81,7 @@ const ContactForm = () => {
             placeholder="John Doe" 
             value={formData.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
-            className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20"
+            className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"
             required 
           />
         </div>
@@ -94,7 +94,7 @@ const ContactForm = () => {
             placeholder="(403) 123-4567" 
             value={formData.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
-            className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20"
+            className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"
             required 
           />
         </div>
@@ -109,7 +109,7 @@ const ContactForm = () => {
           placeholder="john@example.com" 
           value={formData.email}
           onChange={(e) => handleInputChange('email', e.target.value)}
-          className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20"
+          className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"
           required 
         />
       </div>
@@ -122,7 +122,7 @@ const ContactForm = () => {
           value={formData.service}
           onValueChange={(value) => handleInputChange('service', value)}
         >
-          <SelectTrigger className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20">
+          <SelectTrigger className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base">
             <SelectValue placeholder="Select a service" />
           </SelectTrigger>
           <SelectContent>
@@ -154,14 +154,14 @@ const ContactForm = () => {
           placeholder="e.g., 2020 Ford F-150, 2018 Chevrolet Silverado" 
           value={formData.vehicleInfo}
           onChange={(e) => handleInputChange('vehicleInfo', e.target.value)}
-          className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20"
+          className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"
           required 
         />
         <p className="text-xs text-gray-500">Include year, make, and model of your vehicle</p>
       </div>
 
       {/* Urgency and Date */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <div className="space-y-2">
           <Label className="text-sm font-medium text-gray-700">How urgent is this? *</Label>
           <RadioGroup 
@@ -171,15 +171,15 @@ const ContactForm = () => {
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="routine" id="routine" />
-              <Label htmlFor="routine" className="text-sm">Routine (1-2 weeks)</Label>
+              <Label htmlFor="routine" className="text-xs sm:text-sm">Routine (1-2 weeks)</Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="urgent" id="urgent" />
-              <Label htmlFor="urgent" className="text-sm">Urgent (3-5 days)</Label>
+              <Label htmlFor="urgent" className="text-xs sm:text-sm">Urgent (3-5 days)</Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="emergency" id="emergency" />
-              <Label htmlFor="emergency" className="text-sm">Emergency (Same day)</Label>
+              <Label htmlFor="emergency" className="text-xs sm:text-sm">Emergency (Same day)</Label>
             </div>
           </RadioGroup>
         </div>
@@ -191,7 +191,7 @@ const ContactForm = () => {
             type="date" 
             value={formData.preferredDate}
             onChange={(e) => handleInputChange('preferredDate', e.target.value)}
-            className="h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20"
+            className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"
           />
         </div>
       </div>
@@ -203,7 +203,7 @@ const ContactForm = () => {
           id="message"
           name="message"
           placeholder="Describe the problem, symptoms, or what you need done..."
-          className="min-h-[120px] border-gray-300 focus:border-primary-red focus:ring-primary-red/20 resize-none"
+          className="min-h-[100px] sm:min-h-[120px] border-gray-300 focus:border-primary-red focus:ring-primary-red/20 resize-none text-sm sm:text-base"
           value={formData.message}
           onChange={(e) => handleInputChange('message', e.target.value)}
           required
@@ -211,27 +211,29 @@ const ContactForm = () => {
       </div>
 
       {/* Submit Button */}
-      <div className="pt-4">
+      <div className="pt-3 sm:pt-4">
         <Button 
           type="submit" 
           variant="hero" 
           size="lg" 
-          className="w-full h-12 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
+          className="w-full h-10 sm:h-12 text-sm sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
           disabled={isSubmitting}
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-              Submitting Request...
+              <Loader2 className="mr-2 h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
+              <span className="hidden xs:inline">Submitting Request...</span>
+              <span className="xs:hidden">Submitting...</span>
             </>
           ) : (
             <>
-              <Calendar className="mr-2 h-5 w-5" />
-              Book Service Appointment
+              <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="hidden xs:inline">Book Service Appointment</span>
+              <span className="xs:hidden">Book Service</span>
             </>
           )}
         </Button>
-        <p className="text-sm text-gray-500 text-center mt-3">
+        <p className="text-xs sm:text-sm text-gray-500 text-center mt-2 sm:mt-3">
           We'll contact you within 24 hours to confirm your appointment
         </p>
       </div>
