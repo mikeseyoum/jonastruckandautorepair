@@ -7,62 +7,47 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/50" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <ScrollReveal direction="up">
-              <div className="max-w-5xl mx-auto">
+              <div className="max-w-4xl mx-auto">
                 {/* Main Heading */}
-                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
                   <span className="block">Ready to Get Your</span>
-                  <span className="block text-primary-red mt-1 sm:mt-2">Vehicle Back on the Road?</span>
+                  <span className="block text-primary-red mt-2">Vehicle Back on the Road?</span>
                 </h1>
                 
                 {/* Subtitle */}
-                <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-relaxed max-w-4xl mx-auto px-2 sm:px-4">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto">
                   Professional automotive service and repair. Schedule your appointment today and experience the difference of quality workmanship.
                 </p>
                 
                 {/* Action Buttons */}
-                <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto px-2">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto">
                   <a 
                     href="#contact-form" 
-                    className="group w-full xs:w-auto inline-flex items-center justify-center gap-2 bg-primary-red hover:bg-primary-red/90 text-white px-4 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-semibold text-sm xs:text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-red hover:bg-primary-red/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    <Calendar className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
+                    <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
                     <span>Book Service Now</span>
                   </a>
                   <a 
                     href="tel:403-123-4567" 
-                    className="group w-full xs:w-auto inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-4 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-semibold text-sm xs:text-base sm:text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
+                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
                   >
-                    <Phone className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
+                    <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                     <span>Call (403) 123-4567</span>
                   </a>
                 </div>
 
-                {/* Trust Indicators */}
-                <div className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex flex-col xs:flex-row items-center justify-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 text-xs xs:text-sm sm:text-base text-gray-300">
-                  <div className="flex items-center gap-1.5 xs:gap-2">
-                    <Wrench className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary-red flex-shrink-0" />
-                    <span className="whitespace-nowrap">20+ Years Experience</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 xs:gap-2">
-                    <Car className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary-red flex-shrink-0" />
-                    <span className="whitespace-nowrap">120+ Happy Customers</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 xs:gap-2">
-                    <Clock className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-primary-red flex-shrink-0" />
-                    <span className="whitespace-nowrap">24-Hour Response</span>
-                  </div>
-                </div>
               </div>
             </ScrollReveal>
           </div>
