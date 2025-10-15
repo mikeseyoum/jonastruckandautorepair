@@ -102,7 +102,7 @@ This request was submitted through the Jonas Auto & Truck website contact form.
 Submitted at: 1/10/2024, 2:30:15 PM
 ```
 
-## 🔧 Troubleshooting
+
 
 ### Emails Not Being Sent
 - Check that all credentials are correct in `emailConfig.ts`
