@@ -15,12 +15,12 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/50" />
         </div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 lg:pt-32">
           <div className="text-center">
             <ScrollReveal direction="up">
               <div className="max-w-4xl mx-auto">
                 {/* Main Heading */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
                   <span className="block">Ready to Get Your</span>
                   <span className="block text-primary-red mt-2">Vehicle Back on the Road?</span>
                 </h1>
