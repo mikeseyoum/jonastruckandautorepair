@@ -53,7 +53,7 @@ Submitted at: {{submitted_at}}
 1. Go to **"Account"** → **"General"**
 2. **Copy your Public Key** (looks like: `user_abc123def456`)
 
-agcXe2mPbIdLCq-Sa
+
 
 ### Step 5: Update Your Website Configuration
 1. Open the file: `src/lib/emailConfig.ts`
