@@ -5,10 +5,10 @@ import heroImage from "@/assets/hero-about.jpg";
 
 const About = () => {
   const stats = [
-    { icon: Calendar, value: 25, label: "Years in Business", suffix: "+" },
-    { icon: Users, value: 5000, label: "Satisfied Customers", suffix: "+" },
-    { icon: Award, value: 15, label: "Certified Technicians" },
-    { icon: Check, value: 10000, label: "Vehicles Serviced", suffix: "+" },
+    { icon: Calendar, value: 20, label: "Years of Experience", suffix: "+" },
+    { icon: Users, value: 120, label: "Satisfied Customers", suffix: "+" },
+    { icon: Award, value: 10, label: "Certified Technicians" },
+    { icon: Check, value: 100, label: "Vehicles Serviced", suffix: "+" },
   ];
 
   const values = [
@@ -43,7 +43,7 @@ const About = () => {
               About Us
             </h1>
             <p className="text-fluid text-gray-200 max-w-3xl mx-auto">
-              Your trusted partner in automotive care since 1998
+              Your trusted partner in automotive care with over 20 years of experience
             </p>
           </div>
         </div>
@@ -73,13 +73,13 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p className="text-sm md:text-base">
-                    Founded in 1998 by Jonas, our shop began with a simple mission: to provide honest, reliable automotive service to our community. What started as a small two-bay garage has grown into a full-service automotive facility, but our core values remain unchanged.
+                    Founded over 20 years ago by Jonas, our shop began with a simple mission: to provide honest, reliable automotive service to our community. What started as a small two-bay garage has grown into a full-service automotive facility, but our core values remain unchanged.
                   </p>
                   <p className="text-sm md:text-base">
-                    Over the past 25 years, we've built our reputation on integrity, quality workmanship, and exceptional customer service. Our team of ASE-certified technicians brings decades of combined experience and stays current with the latest automotive technology and repair techniques.
+                    Over the past 20+ years, we've built our reputation on integrity, quality workmanship, and exceptional customer service. Our team of 10 certified technicians brings decades of combined experience and stays current with the latest automotive technology and repair techniques.
                   </p>
                   <p className="text-sm md:text-base">
-                    We're not just mechanics—we're automotive care professionals who take pride in our work. Whether you drive a compact car, luxury sedan, or heavy-duty truck, we treat every vehicle as if it were our own. Our commitment to excellence has earned us thousands of loyal customers and a reputation as the most trusted auto shop in the area.
+                    We're not just mechanics—we're automotive care professionals who take pride in our work. Whether you drive a compact car, luxury sedan, or heavy-duty truck, we treat every vehicle as if it were our own. Our commitment to excellence has earned us over 120 satisfied customers and a reputation as the most trusted auto shop in the area.
                   </p>
                   <p className="font-semibold text-gray-900 text-sm md:text-base">
                     When you choose Jonas Auto & Truck, you're choosing a partner who genuinely cares about keeping you safe on the road.

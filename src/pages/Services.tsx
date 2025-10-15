@@ -1,59 +1,84 @@
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Wrench, Shield, Gauge, Droplet, Battery, CircleDot, Thermometer, Zap, Settings, Truck } from "lucide-react";
+import { Wrench, Shield, Gauge, Droplet, CircleDot, Thermometer, Zap, Settings, Truck, Cog, Hammer, RotateCcw, CheckCircle, Wind } from "lucide-react";
 import heroImage from "@/assets/hero-services.jpg";
 
 const Services = () => {
   const allServices = [
     {
-      icon: Wrench,
-      title: "Oil Change & Maintenance",
-      description: "Regular oil changes, filter replacements, and fluid checks to keep your vehicle running smoothly and efficiently.",
+      icon: Truck,
+      title: "Heavy Equipment Repair",
+      description: "Comprehensive repair services for heavy equipment and commercial vehicles. Our trained technicians handle all makes and models with the latest tooling and equipment.",
     },
     {
-      icon: Shield,
-      title: "Brake Services",
-      description: "Complete brake system inspection, repair, and replacement including pads, rotors, calipers, and brake fluid service.",
+      icon: CheckCircle,
+      title: "MVI & CVIP Inspection",
+      description: "Professional Motor Vehicle Inspection (MVI) and Commercial Vehicle Inspection Program (CVIP) services to ensure your vehicle meets all safety and regulatory standards.",
     },
     {
-      icon: Gauge,
-      title: "Engine Diagnostics",
-      description: "Advanced computer diagnostics to identify engine problems, check engine lights, and performance issues.",
-    },
-    {
-      icon: Droplet,
-      title: "Transmission Service",
-      description: "Transmission fluid changes, repairs, and complete transmission replacement services for all vehicle types.",
-    },
-    {
-      icon: Battery,
-      title: "Electrical Systems",
-      description: "Battery testing and replacement, alternator service, starter repair, and complete electrical system diagnostics.",
-    },
-    {
-      icon: CircleDot,
-      title: "Tire Services",
-      description: "Tire rotation, balancing, alignment, repair, and replacement with quality tires from leading manufacturers.",
-    },
-    {
-      icon: Thermometer,
-      title: "Cooling System",
-      description: "Radiator service, coolant flush, thermostat replacement, and complete cooling system maintenance and repair.",
-    },
-    {
-      icon: Zap,
-      title: "Performance Upgrades",
-      description: "Engine tuning, exhaust systems, air intake modifications, and performance enhancement services.",
+      icon: Hammer,
+      title: "Truck Collision & Body Repair",
+      description: "Expert collision repair and body work services for trucks and commercial vehicles. We restore your vehicle to pre-accident condition with quality craftsmanship.",
     },
     {
       icon: Settings,
       title: "Preventive Maintenance",
-      description: "Comprehensive vehicle inspections, scheduled maintenance packages, and preventive care to avoid costly repairs.",
+      description: "Scheduled preventive maintenance programs designed to keep your vehicle operating at peak efficiency and avoid costly repairs down the road.",
     },
     {
-      icon: Truck,
-      title: "Truck & Fleet Service",
-      description: "Specialized maintenance and repair services for trucks, commercial vehicles, and fleet management support.",
+      icon: CircleDot,
+      title: "Truck Wheel Alignment",
+      description: "Precision wheel alignment services for trucks and heavy equipment to ensure optimal tire wear, fuel efficiency, and vehicle handling.",
+    },
+    {
+      icon: Wind,
+      title: "EGR & DPF Cleaning",
+      description: "Professional EGR (Exhaust Gas Recirculation) and DPF (Diesel Particulate Filter) cleaning services to maintain engine performance and emissions compliance.",
+    },
+    {
+      icon: Cog,
+      title: "Transmission & Clutch Repair",
+      description: "Complete transmission and clutch repair services including rebuilds, replacements, and maintenance for all types of commercial vehicles.",
+    },
+    {
+      icon: Thermometer,
+      title: "HVAC Repair",
+      description: "Heating, ventilation, and air conditioning system repair and maintenance for commercial vehicles and heavy equipment.",
+    },
+    {
+      icon: Wrench,
+      title: "Engine Repair, Overhaul & Rebuild",
+      description: "Complete engine services including repairs, overhauls, rebuilds, and conversions. Our technicians are trained on all major engine manufacturers.",
+    },
+    {
+      icon: Gauge,
+      title: "Diagnostics & Electrical",
+      description: "Advanced diagnostic services and electrical system repair for modern vehicles with complex electronic systems and high-tech equipment.",
+    },
+    {
+      icon: RotateCcw,
+      title: "Driveline Service",
+      description: "Complete driveline maintenance and repair including driveshafts, differentials, transfer cases, and all related components.",
+    },
+    {
+      icon: Zap,
+      title: "Exhaust System",
+      description: "Exhaust system repair, replacement, and modification services including mufflers, catalytic converters, and emission control systems.",
+    },
+    {
+      icon: Droplet,
+      title: "Oil & Fluid Change",
+      description: "Regular oil changes and fluid service for all vehicle types including engine oil, hydraulic fluids, and specialized lubricants.",
+    },
+    {
+      icon: Thermometer,
+      title: "Coolant System",
+      description: "Complete coolant system service including radiator repair, coolant flush, thermostat replacement, and cooling system maintenance.",
+    },
+    {
+      icon: Shield,
+      title: "Brake Service",
+      description: "Comprehensive brake system service including inspection, repair, and replacement of pads, rotors, calipers, and brake fluid service.",
     },
   ];
 
@@ -74,7 +99,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-fluid text-gray-200 max-w-3xl mx-auto text-balance">
-              Comprehensive automotive maintenance and repair services for all makes and models
+              Professional automotive service and repair for all makes and models. From routine maintenance to major overhauls, we keep your vehicle operating at peak efficiency.
             </p>
           </div>
         </div>
@@ -86,10 +111,10 @@ const Services = () => {
           <ScrollReveal>
             <div className="text-center mb-12 md:mb-16">
               <h2 className="heading-hero text-gray-900 mb-4 md:mb-6 text-balance">
-                Complete Auto Care Solutions
+                Professional Service & Repair Solutions
               </h2>
               <p className="text-fluid text-gray-600 max-w-2xl mx-auto text-balance">
-                From routine maintenance to complex repairs, we've got you covered
+                Highly trained technicians with industry-leading expertise and modern equipment to service all your automotive needs
               </p>
             </div>
           </ScrollReveal>

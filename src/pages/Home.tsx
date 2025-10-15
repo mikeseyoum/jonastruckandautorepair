@@ -71,8 +71,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-screen-xl mx-auto container-padding section-padding">
-          <div className="max-w-5xl">
+        <div className="relative z-10 max-w-screen-xl sm:mx-auto container-padding section-padding">
+          <div className="max-w-5xl lg:max-w-4xl lg:ml-0 lg:mr-auto">
             <h1 className="text-fluid-xl font-display uppercase tracking-tight mb-6 md:mb-8 text-clean-shadow">
               <span className="text-white block mb-2 md:mb-3 heading-display">Professional</span>
               <span className="text-gradient-animated heading-display">
