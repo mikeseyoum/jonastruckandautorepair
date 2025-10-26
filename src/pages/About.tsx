@@ -1,5 +1,7 @@
 import StatCard from "@/components/StatCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
+import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Award, Users, Calendar, Check } from "lucide-react";
 import heroImage from "@/assets/hero-about.jpg";
 
@@ -26,8 +28,20 @@ const About = () => {
     },
   ];
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" }
+  ];
+
   return (
     <div>
+      <SEO
+        title="About Jonas Auto & Truck | 20+ Years of Trusted Service"
+        description="Learn about Jonas Auto & Truck's 20+ years of automotive service excellence in Calgary. Certified technicians, quality workmanship, and customer satisfaction."
+        keywords="about Jonas Auto, automotive service Calgary, certified technicians, 20 years experience, trusted auto repair"
+        canonicalUrl="/about"
+        structuredData={breadcrumbStructuredData(breadcrumbItems)}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div

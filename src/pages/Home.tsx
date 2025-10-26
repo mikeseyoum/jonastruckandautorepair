@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
+import { businessStructuredData } from "@/lib/structuredData";
 import { Wrench, Shield, Clock, Award, Check } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
 import ctaBackground from "@/assets/cta-background.jpg";
@@ -62,6 +64,13 @@ const Home = () => {
 
   return (
     <div>
+      <SEO
+        title="Professional Auto & Truck Service | Jonas Auto Calgary"
+        description="Expert automotive maintenance and repair services in Calgary. Certified technicians, quality workmanship, and competitive pricing. Over 20 years of trusted service."
+        keywords="auto repair Calgary, truck service Calgary, automotive maintenance, brake service, engine repair, oil change, certified technicians, Jonas Auto"
+        canonicalUrl="/"
+        structuredData={businessStructuredData}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         <div

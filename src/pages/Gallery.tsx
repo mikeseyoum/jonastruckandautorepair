@@ -1,4 +1,6 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
+import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Wrench, Shield, Gauge, Droplet, Battery, CircleDot, Thermometer, Zap, Settings, Truck, Award, Users, Clock, Check } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
 import servicesImage from "@/assets/hero-services.jpg";
@@ -65,8 +67,20 @@ const Gallery = () => {
     { icon: Truck, title: "Fleet Service", description: "Commercial vehicle maintenance" },
   ];
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Gallery", url: "/gallery" }
+  ];
+
   return (
     <div>
+      <SEO
+        title="Gallery | Jonas Auto & Truck Facility & Services"
+        description="View our state-of-the-art automotive facility, service bays, and equipment. See why customers trust Jonas Auto & Truck for their automotive needs in Calgary."
+        keywords="Jonas Auto gallery, automotive facility Calgary, service bays, auto repair shop photos, equipment gallery"
+        canonicalUrl="/gallery"
+        structuredData={breadcrumbStructuredData(breadcrumbItems)}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div

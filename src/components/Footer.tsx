@@ -60,9 +60,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@jonasauto.com" className="flex items-start gap-2 md:gap-3 hover:text-primary-red transition-colors">
+                <a href="mailto:info@jonastruckandautorepair.com" className="flex items-start gap-2 md:gap-3 hover:text-primary-red transition-colors">
                   <Mail className="h-4 w-4 md:h-5 md:w-5 mt-0.5 flex-shrink-0" />
-                  <span>info@jonasauto.com</span>
+                  <span>info@jonastruckandautorepair.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-2 md:gap-3">

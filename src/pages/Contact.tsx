@@ -1,11 +1,25 @@
 import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
+import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Phone, Mail, MapPin, Clock, Calendar, MessageSquare, Car, Wrench } from "lucide-react";
 import heroImage from "@/assets/hero-contact.jpg";
 
 const Contact = () => {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" }
+  ];
+
   return (
     <div>
+      <SEO
+        title="Contact Jonas Auto & Truck | Schedule Service in Calgary"
+        description="Contact Jonas Auto & Truck for professional automotive service in Calgary. Call (403) 123-4567 or book online. Located at 5235 28 Ave SE."
+        keywords="contact Jonas Auto, auto repair Calgary, schedule service, automotive service Calgary, book appointment"
+        canonicalUrl="/contact"
+        structuredData={breadcrumbStructuredData(breadcrumbItems)}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div
@@ -120,7 +134,7 @@ const Contact = () => {
 
                   {/* Email */}
                   <a
-                    href="mailto:info@jonasauto.com"
+                    href="mailto:info@jonastruckandautorepair.com"
                     className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300"
                   >
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red group-hover:scale-110 transition-all duration-300">
@@ -128,7 +142,7 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Email</h3>
-                      <p className="text-gray-600 group-hover:text-primary-red transition-colors text-sm sm:text-base break-all">info@jonasauto.com</p>
+                      <p className="text-gray-600 group-hover:text-primary-red transition-colors text-sm sm:text-base break-all">info@jonastruckandautorepair.com</p>
                       <p className="text-xs sm:text-sm text-gray-500">Send us your questions or concerns</p>
                     </div>
                   </a>

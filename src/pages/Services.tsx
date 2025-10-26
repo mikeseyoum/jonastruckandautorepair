@@ -1,5 +1,7 @@
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
+import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Wrench, Shield, Gauge, Droplet, CircleDot, Thermometer, Zap, Settings, Truck, Cog, Hammer, RotateCcw, CheckCircle, Wind } from "lucide-react";
 import heroImage from "@/assets/hero-services.jpg";
 
@@ -82,8 +84,20 @@ const Services = () => {
     },
   ];
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" }
+  ];
+
   return (
     <div>
+      <SEO
+        title="Automotive Services | Auto Repair & Truck Service Calgary"
+        description="Complete automotive services including heavy equipment repair, MVI inspections, collision repair, and preventive maintenance. Professional service in Calgary."
+        keywords="automotive services Calgary, heavy equipment repair, MVI inspection, truck collision repair, preventive maintenance, commercial vehicle service"
+        canonicalUrl="/services"
+        structuredData={breadcrumbStructuredData(breadcrumbItems)}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div

@@ -63,9 +63,9 @@ const Header = () => {
               <Phone className="h-3 w-3 md:h-4 md:w-4" />
               (403) 123-4567
             </a>
-            <a href="mailto:info@jonasauto.com" className="flex items-center gap-2 hover:text-primary-red transition-colors">
+            <a href="mailto:info@jonastruckandautorepair.com" className="flex items-center gap-2 hover:text-primary-red transition-colors">
               <Mail className="h-3 w-3 md:h-4 md:w-4" />
-              info@jonasauto.com
+              info@jonastruckandautorepair.com
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -206,9 +206,9 @@ const Header = () => {
                       <Phone className="h-4 w-4 text-primary-red" />
                       <span>(403) 123-4567</span>
                     </a>
-                    <a href="mailto:info@jonasauto.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-red transition-colors">
+                    <a href="mailto:info@jonastruckandautorepair.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-red transition-colors">
                       <Mail className="h-4 w-4 text-primary-red" />
-                      <span>info@jonasauto.com</span>
+                      <span>info@jonastruckandautorepair.com</span>
                     </a>
                     <div className="flex items-start gap-2 text-sm text-gray-600">
                       <Clock className="h-4 w-4 text-primary-red mt-0.5" />
