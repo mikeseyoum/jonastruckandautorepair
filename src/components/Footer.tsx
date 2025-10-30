@@ -68,9 +68,7 @@ const Footer = () => {
               <li className="flex items-start gap-2 md:gap-3">
                 <Clock className="h-4 w-4 md:h-5 md:w-5 mt-0.5 flex-shrink-0" />
                 <div>
-                  <div>Mon-Fri: 8:00 AM - 6:00 PM</div>
-                  <div>Saturday: 9:00 AM - 4:00 PM</div>
-                  <div className="text-gray-500">Sunday: Closed</div>
+                  <div>Mon-Sun: 7:00 AM - 7:00 PM</div>
                 </div>
               </li>
             </ul>

@@ -1,61 +1,65 @@
-import React, { ReactNode } from 'react';
-import useScrollReveal from '@/hooks/useScrollReveal';
+// src/components/ScrollReveal.tsx
+'use client';
+
+import { ReactNode, useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 interface ScrollRevealProps {
   children: ReactNode;
+  delay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'scale';
   className?: string;
-  direction?: 'up' | 'left' | 'right' | 'scale';
-  delay?: 100 | 200 | 300 | 400;
-  threshold?: number;
-  rootMargin?: string;
-  triggerOnce?: boolean;
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({
+const ScrollReveal = ({
   children,
-  className = '',
+  delay = 0,
   direction = 'up',
-  delay,
-  threshold = 0.1,
-  rootMargin = '0px 0px -50px 0px',
-  triggerOnce = true,
-}) => {
-  const elementRef = useScrollReveal({
-    threshold,
-    rootMargin,
-    triggerOnce,
-  });
+  className = '',
+}: ScrollRevealProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const controls = useAnimation();
 
-  const getDirectionClass = () => {
-    switch (direction) {
-      case 'left':
-        return 'scroll-reveal-left';
-      case 'right':
-        return 'scroll-reveal-right';
-      case 'scale':
-        return 'scroll-reveal-scale';
-      default:
-        return 'scroll-reveal';
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
     }
-  };
+  }, [isInView, controls]);
 
-  const getDelayClass = () => {
-    if (!delay) return '';
-    return `scroll-reveal-delay-${delay}`;
-  };
+  // Define cubic-bezier as Easing array
+  const ease: [number, number, number, number] = [0.215, 0.610, 0.355, 1.000];
 
-  const combinedClassName = [
-    getDirectionClass(),
-    getDelayClass(),
-    className,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  const variants = {
+    hidden: {
+      opacity: 0,
+      y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
+      x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0,
+      scale: direction === 'scale' ? 0.9 : 1,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        delay: delay / 1000,
+        ease, // Now properly typed as Easing[]
+      },
+    },
+  };
 
   return (
-    <div ref={elementRef} className={combinedClassName}>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className={className}
+    >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
