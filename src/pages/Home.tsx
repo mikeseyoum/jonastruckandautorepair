@@ -63,7 +63,7 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Professional Auto & Truck Service | Jonas Auto Calgary"
+        title="Professional Truck & Auto Service | Jonas Auto Calgary"
         description="Expert automotive repair and maintenance in Calgary. Certified technicians, quality parts, and trusted service for over 20 years."
         keywords="auto repair Calgary, truck service, brake repair, oil change, engine diagnostics, certified mechanics"
         canonicalUrl="/"
