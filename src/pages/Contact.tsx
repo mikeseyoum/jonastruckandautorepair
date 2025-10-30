@@ -3,7 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Phone, Mail, MapPin, Clock, Calendar, MessageSquare, Car, Wrench } from "lucide-react";
-import heroImage from "@/assets/hero-contact.jpg";
+import heroImage from "@/assets/hero.jpg";
 
 const Contact = () => {
   const breadcrumbItems = [
@@ -58,7 +58,7 @@ const Contact = () => {
                     className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
                   >
                     <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span>Call (403) 123-4567</span>
+                    <span>Call (403) 470-4897</span>
                   </a>
                 </div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Phone</h3>
-                      <p className="text-gray-600 group-hover:text-primary-red transition-colors text-sm sm:text-base">(403) 123-4567</p>
+                      <p className="text-gray-600 group-hover:text-primary-red transition-colors text-sm sm:text-base">(403) 470-4897</p>
                       <p className="text-xs sm:text-sm text-gray-500">Call us for immediate assistance</p>
                     </div>
                   </a>
@@ -171,17 +171,10 @@ const Contact = () => {
                       <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base">Business Hours</h3>
                       <div className="space-y-1.5 sm:space-y-2 text-gray-600">
                         <div className="flex flex-col xs:flex-row xs:justify-between xs:items-center gap-1 xs:gap-2">
-                          <span className="text-xs sm:text-sm">Monday - Friday</span>
-                          <span className="font-medium text-gray-900 text-xs sm:text-sm">8:00 AM - 6:00 PM</span>
+                          <span className="text-xs sm:text-sm">Monday - Sunday</span>
+                          <span className="font-medium text-gray-900 text-xs sm:text-sm">7:00 AM - 7:00 PM</span>
                         </div>
-                        <div className="flex flex-col xs:flex-row xs:justify-between xs:items-center gap-1 xs:gap-2">
-                          <span className="text-xs sm:text-sm">Saturday</span>
-                          <span className="font-medium text-gray-900 text-xs sm:text-sm">9:00 AM - 4:00 PM</span>
-                        </div>
-                        <div className="flex flex-col xs:flex-row xs:justify-between xs:items-center gap-1 xs:gap-2">
-                          <span className="text-xs sm:text-sm">Sunday</span>
-                          <span className="font-medium text-gray-900 text-xs sm:text-sm">Closed</span>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>

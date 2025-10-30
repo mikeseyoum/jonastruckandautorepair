@@ -3,7 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { breadcrumbStructuredData } from "@/lib/structuredData";
 import { Award, Users, Calendar, Check } from "lucide-react";
-import heroImage from "@/assets/hero-about.jpg";
+import heroImage from "@/assets/banner.jpg";
 
 const About = () => {
   const stats = [
