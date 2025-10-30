@@ -87,16 +87,22 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p className="text-sm md:text-base">
-                    Founded over 20 years ago by Jonas, our shop began with a simple mission: to provide honest, reliable automotive service to our community. What started as a small two-bay garage has grown into a full-service automotive facility, but our core values remain unchanged.
+                    I’m Jonas Hila, owner of Jonas Truck & Auto Repair. From a young age, I loved riding along on road trips with my father and was fascinated by how a well‑maintained vehicle feels—confident, quiet, and safe. That early passion for the road grew into a commitment to keep families and businesses moving with honest, reliable service.
                   </p>
                   <p className="text-sm md:text-base">
-                    Over the past 20+ years, we've built our reputation on integrity, quality workmanship, and exceptional customer service. Our team of 10 certified technicians brings decades of combined experience and stays current with the latest automotive technology and repair techniques.
+                    In the early 2000s, seeing the need in Calgary for an auto shop that puts people first, I started Jonas Truck & Auto Repair. We began as a small garage and have grown into a full‑service facility serving cars, SUVs, light‑duty trucks, and work fleets—without ever compromising on integrity.
                   </p>
                   <p className="text-sm md:text-base">
-                    We're not just mechanics—we're automotive care professionals who take pride in our work. Whether you drive a compact car, luxury sedan, or heavy-duty truck, we treat every vehicle as if it were our own. Our commitment to excellence has earned us over 120 satisfied customers and a reputation as the most trusted auto shop in the area.
+                    Our motto is safety first and quality always. We use proven diagnostics, quality parts, and manufacturer‑backed procedures. We explain your options clearly, never push unnecessary repairs, and stand behind our work. It’s a straightforward approach that has earned us long‑term relationships and steady word‑of‑mouth.
+                  </p>
+                  <p className="text-sm md:text-base">
+                    The most rewarding moments for me are seeing a customer drive away the same day with confidence—whether it’s a family vehicle ready for winter or a small business fleet back on schedule. I credit our success to a dedicated team that treats every customer with respect and every vehicle like their own.
+                  </p>
+                  <p className="text-sm md:text-base">
+                    When I’m not at the shop, I spend time with my family and stay active. Calgary is home, and serving our community with honest work is what drives us.
                   </p>
                   <p className="font-semibold text-gray-900 text-sm md:text-base">
-                    When you choose Jonas Auto & Truck, you're choosing a partner who genuinely cares about keeping you safe on the road.
+                    If you need dependable maintenance or repair, Jonas Truck & Auto Repair is here to help—professional service, clear communication, and workmanship you can trust.
                   </p>
                 </div>
               </div>
