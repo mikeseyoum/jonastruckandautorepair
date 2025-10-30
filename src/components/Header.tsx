@@ -61,7 +61,7 @@ const Header = () => {
           <div className="flex gap-4 md:gap-6">
             <a href="tel:403-123-4567" className="flex items-center gap-2 hover:text-primary-red transition-colors">
               <Phone className="h-3 w-3 md:h-4 md:w-4" />
-              (403) 123-4567
+              (403) 470-4897
             </a>
             <a href="mailto:info@jonastruckandautorepair.com" className="flex items-center gap-2 hover:text-primary-red transition-colors">
               <Mail className="h-3 w-3 md:h-4 md:w-4" />
