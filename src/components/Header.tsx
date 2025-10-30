@@ -212,8 +212,7 @@ const Header = () => {
                     <div className="flex items-start gap-2 text-sm text-gray-600">
                       <Clock className="h-4 w-4 text-primary-red mt-0.5" />
                       <div>
-                        <div>Mon-Fri: 8AM-6PM</div>
-                        <div>Sat: 9AM-4PM</div>
+                        <div>Mon-Sun: 7:00 AM - 7:00 PM</div>
                       </div>
                     </div>
                   </div>
