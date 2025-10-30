@@ -70,8 +70,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-2">
             <Clock className="h-3 w-3 md:h-4 md:w-4" />
-            <span className="hidden xl:inline">Mon-Fri: 8AM-6PM | Sat: 9AM-4PM</span>
-            <span className="xl:hidden">Mon-Fri: 8-6 | Sat: 9-4</span>
+            <span className="hidden xl:inline">Mon-Sun: 7:00 AM - 7:00 PM</span>
           </div>
         </div>
       </div>
