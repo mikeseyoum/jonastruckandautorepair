@@ -16,6 +16,12 @@ export interface ServiceRequest {
 
 export const sendServiceRequest = async (data: ServiceRequest): Promise<boolean> => {
   try {
+    // Validate EmailJS configuration
+    if (!EMAIL_CONFIG.SERVICE_ID || !EMAIL_CONFIG.TEMPLATE_ID || !EMAIL_CONFIG.PUBLIC_KEY) {
+      console.error('EmailJS configuration is missing. Please configure EMAIL_CONFIG.');
+      return false;
+    }
+
     // EmailJS Integration
     const emailjs = await import('@emailjs/browser');
     
@@ -38,59 +44,16 @@ export const sendServiceRequest = async (data: ServiceRequest): Promise<boolean>
       EMAIL_CONFIG.PUBLIC_KEY
     );
     
-    return result.status === 200;
-
-    // Option 2: Formspree Integration
-    // Uncomment and configure with your Formspree endpoint
-    /*
-    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        service: data.service,
-        vehicle_make: data.vehicleMake,
-        vehicle_model: data.vehicleModel,
-        vehicle_year: data.vehicleYear,
-        vin: data.vin,
-        mileage: data.mileage,
-        urgency: data.urgency,
-        preferred_date: data.preferredDate,
-        preferred_time: data.preferredTime,
-        message: data.message,
-        is_commercial: data.isCommercial,
-        has_warranty: data.hasWarranty,
-        is_emergency: data.isEmergency,
-      }),
-    });
+    // Check if the request was successful
+    if (result.status === 200 || result.status === 201) {
+      return true;
+    }
     
-    return response.ok;
-    */
-
-    // Option 3: Your own backend API
-    // Uncomment and configure with your backend endpoint
-    /*
-    const response = await fetch('/api/service-request', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    
-    return response.ok;
-    */
-
-    // For now, simulate successful submission
-    console.log('Service request data:', data);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return true;
+    console.error('EmailJS returned non-success status:', result.status);
+    return false;
 
   } catch (error) {
+    // Log error for debugging (in production, consider sending to error tracking service)
     console.error('Error sending service request:', error);
     return false;
   }
@@ -107,20 +70,12 @@ Email: ${data.email}
 Phone: ${data.phone}
 
 VEHICLE INFORMATION:
-Make: ${data.vehicleMake}
-Model: ${data.vehicleModel}
-Year: ${data.vehicleYear}
-VIN: ${data.vin || 'Not provided'}
-Mileage: ${data.mileage || 'Not provided'}
-Commercial Vehicle: ${data.isCommercial ? 'Yes' : 'No'}
-Under Warranty: ${data.hasWarranty ? 'Yes' : 'No'}
+Vehicle: ${data.vehicleInfo}
 
 SERVICE REQUEST:
 Service Needed: ${data.service}
 Urgency: ${data.urgency}
 Preferred Date: ${data.preferredDate || 'Not specified'}
-Preferred Time: ${data.preferredTime || 'Not specified'}
-Emergency Service: ${data.isEmergency ? 'Yes' : 'No'}
 
 MESSAGE:
 ${data.message}

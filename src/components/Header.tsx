@@ -59,7 +59,7 @@ const Header = () => {
       <div className="hidden lg:block bg-dark-900 text-gray-300 py-2">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 flex justify-between items-center text-xs md:text-sm">
           <div className="flex gap-4 md:gap-6">
-            <a href="tel:403-123-4567" className="flex items-center gap-2 hover:text-primary-red transition-colors">
+            <a href="tel:403-470-4897" className="flex items-center gap-2 hover:text-primary-red transition-colors">
               <Phone className="h-3 w-3 md:h-4 md:w-4" />
               (403) 470-4897
             </a>
@@ -201,9 +201,9 @@ const Header = () => {
                 <div className="bg-gray-50 rounded-xl p-4 space-y-3">
                   <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Contact</h3>
                   <div className="space-y-2">
-                    <a href="tel:403-123-4567" className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-red transition-colors">
+                    <a href="tel:403-470-4897" className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-red transition-colors">
                       <Phone className="h-4 w-4 text-primary-red" />
-                      <span>(403) 123-4567</span>
+                      <span>(403) 470-4897</span>
                     </a>
                     <a href="mailto:info@jonastruckandautorepair.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary-red transition-colors">
                       <Mail className="h-4 w-4 text-primary-red" />

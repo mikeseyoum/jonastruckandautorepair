@@ -61,7 +61,7 @@ const ContactForm = () => {
       console.error("Error submitting service request:", error);
       toast({
         title: "Error",
-        description: "There was an error submitting your request. Please try again or call us directly at (403) 123-4567.",
+        description: "There was an error submitting your request. Please try again or call us directly at (403) 470-4897.",
         variant: "destructive",
       });
     } finally {
@@ -91,7 +91,7 @@ const ContactForm = () => {
             id="phone" 
             name="phone" 
             type="tel" 
-            placeholder="(403) 123-4567" 
+            placeholder="(403) 470-4897" 
             value={formData.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
             className="h-10 sm:h-11 border-gray-300 focus:border-primary-red focus:ring-primary-red/20 text-sm sm:text-base"

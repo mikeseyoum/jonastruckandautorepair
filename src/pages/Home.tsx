@@ -234,7 +234,7 @@ const Home = () => {
                 <Link to="/contact">Book Online</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-black hover:bg-white hover:text-black px-8 py-6 text-lg">
-                <a href="tel:403-123-4567">Call (403) 123-4567</a>
+                <a href="tel:403-470-4897">Call (403) 470-4897</a>
               </Button>
             </div>
           </div>

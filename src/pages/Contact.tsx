@@ -15,7 +15,7 @@ const Contact = () => {
     <div>
       <SEO
         title="Contact Jonas Auto & Truck | Schedule Service in Calgary"
-        description="Contact Jonas Auto & Truck for professional automotive service in Calgary. Call (403) 123-4567 or book online. Located at 5235 28 Ave SE."
+        description="Contact Jonas Auto & Truck for professional automotive service in Calgary. Call (403) 470-4897 or book online. Located at 5235 28 Ave SE."
         keywords="contact Jonas Auto, auto repair Calgary, schedule service, automotive service Calgary, book appointment"
         canonicalUrl="/contact"
         structuredData={breadcrumbStructuredData(breadcrumbItems)}
@@ -54,7 +54,7 @@ const Contact = () => {
                     <span>Book Service Now</span>
                   </a>
                   <a 
-                    href="tel:403-123-4567" 
+                    href="tel:403-470-4897" 
                     className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
                   >
                     <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -119,7 +119,7 @@ const Contact = () => {
                 <div className="space-y-4 sm:space-y-6">
                   {/* Phone */}
                   <a
-                    href="tel:403-123-4567"
+                    href="tel:403-470-4897"
                     className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300"
                   >
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-red group-hover:scale-110 transition-all duration-300">

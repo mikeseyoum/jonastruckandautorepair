@@ -8,7 +8,7 @@ export const businessStructuredData = {
   "url": "https://jonastruckandautorepair.com",
   "logo": "https://jonastruckandautorepair.com/logo.png",
   "image": "https://jonastruckandautorepair.com/logo.png",
-  "telephone": "+1-403-123-4567",
+  "telephone": "+1-403-470-4897",
   "email": "info@jonastruckandautorepair.com",
   "address": {
     "@type": "PostalAddress",
@@ -26,15 +26,9 @@ export const businessStructuredData = {
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "16:00"
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:00",
+      "closes": "19:00"
     }
   ],
   "priceRange": "$$",
@@ -118,7 +112,7 @@ export const organizationStructuredData = {
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-403-123-4567",
+    "telephone": "+1-403-470-4897",
     "contactType": "customer service",
     "areaServed": "CA",
     "availableLanguage": "English"
